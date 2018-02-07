@@ -1,0 +1,9 @@
+$linkColor: red blue!default;
+page-list {
+    .list{
+        color: nth($list: $linkColor, $n: 2);
+        &:visited{
+            color: nth($list: $linkColor, $n: 1);
+        }
+    }
+}

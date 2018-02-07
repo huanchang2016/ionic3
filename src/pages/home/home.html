@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ionic Menu Starter</h3>
+  <ion-list class="box">
+    <ion-item *ngFor="let info of list;let i=index">
+      <div (click)="console(info.id)" class="border-{{i}}">
+        <span>{{info.id}}</span>
+        <span>{{info.name}}</span>
+      </div>
+    </ion-item>
+  </ion-list>
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>

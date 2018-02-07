@@ -1,0 +1,34 @@
+$colors: #90d #792;
+$baseFontSize: 14px!default;
+$lineHeight: 20px;
+@mixin block{
+    display: block;
+}
+@mixin left{
+    float: left;
+}
+@mixin margin-right($value: 10px){
+    margin-right: $value;
+}
+@mixin margin-left($value: 10px){
+    margin-left: $value;
+}
+contact {
+    .list{
+        font-size: $baseFontSize;
+        .id, .name, .phone{
+            @include block;
+            @include margin-right;
+            @include left
+        }
+        .id{
+            color: nth($list: $colors, $n: 1)
+        }
+        .name{
+            @include margin-left(20px);
+        }
+        .phone{
+            color: nth($list: $colors, $n: 2)
+        }
+    }
+}
